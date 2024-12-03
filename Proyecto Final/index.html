@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Topics</title>
+    <script src="js/anim.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/resources/images/compu.png" alt="Logo de la empresa">
+                <h2 class="nombre-empresa">Proyecto Final Estructuras De Datos</h2>
+            </div>
+            <nav>
+                <a href="/html/PaginaSobreNosotros.html" class="nav-link">Sobre Nosotros</a>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container-content">
+        <div class="modal-bg" id="modal-bg">
+            <div class="container-button-modal_welcome">
+                <div class="button-modal_welcome" id="button-modal">
+                    <h1>Bienvenido</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="tree">  
+            <!-- Nodo principal 1: Introduction to data structures -->
+            <div class="node-container">
+                <div class="button-title" onclick="toggleTree('root')">
+                    <img src="resources/images/icon-ds.png" alt="">
+                </div>
+                <h4>Introduction to data structures</h4>
+                <div class="tree-container" id="root">
+                    <!-- Subtemas de root -->
+                    <a href="/html/PrimeraSeccion/MemoryManagment.html" class="button-subtitle">a. Build-in data type</a>
+                    <a href="/html/PrimeraSeccion/MemoryManagment2.html" class="button-subtitle">b. Functions</a>
+                    <a href="/html/PrimeraSeccion/MemoryManagment3.html" class="button-subtitle">c. Pointers</a>
+                </div>
+            </div>
+
+            <!-- Nodo principal 2: Static data structures -->
+            <div class="node-container">
+                <div class="button-title" onclick="toggleTree('static')">
+                    <img src="resources/images/icon-dyns.png" alt="">
+                </div>
+                <h4>Static data structures</h4>
+                <div class="tree-container" id="static">
+                    <!-- Subtemas de Static -->
+                    <a href="/html/SegundaSeccion/StaticStructure.html" class="button-subtitle">a. Arrays</a>
+                    <a href="/html/SegundaSeccion/StaticStructure2.html" class="button-subtitle">b. Stacks</a>
+                    <a href="/html/SegundaSeccion/StaticStructure3.html" class="button-subtitle">c. Queues</a>
+                </div>
+            </div>
+
+            <!-- Nodo principal 3: Dynamic data structures -->
+            <div class="node-container">
+                <div class="button-title" onclick="toggleTree('dynamic')">
+                    <img src="resources/images/icon-dds.png" alt="">
+                </div>
+                <h4>Dynamic data structures</h4>
+                <div class="tree-container" id="dynamic">
+                    <!-- Subtemas de Dynamic -->
+                    <a href="/html/TerceraSeccion/DynamicStructure1.html" class="button-subtitle">a. Linked list</a>
+                    <a href="/html/TerceraSeccion/DynamicStructure2.html" class="button-subtitle">b. Circular linked list</a>
+                    <a href="/html/TerceraSeccion/DynamicStructure3.html"class="button-subtitle">c. Double linked list</a>
+                    <a href="/html/TerceraSeccion/DynamicStructure4.html" class="button-subtitle">d. Graphs and trees</a>
+                    
+                </div>
+            </div>
+
+            <!-- Nodo principal 4: Sorting structures -->
+            <div class="node-container">
+                <div class="button-title" onclick="toggleTree('sorting')">
+                    <img src="resources/images/icon-sds.png" alt="">
+                </div>
+                <h4>Sorting structures</h4>
+                <div class="tree-container" id="sorting">
+                    <!-- Subtemas de Sorting -->
+                    <a href="/html/CuartaSeccion/SortingStructures.html" class="button-subtitle">a. Bubble sort</a>
+                    <a href="/html/CuartaSeccion/SortingStructures2.html" class="button-subtitle">b. Merge sort</a>
+                    <a href="/html/CuartaSeccion/SortingStructures3.html" class="button-subtitle">c. Quicksort</a>
+                </div>
+            </div>
+
+            <!-- Nodo principal 5: Search structures -->
+            <div class="node-container">
+                <div class="button-title" onclick="toggleTree('search')">
+                    <img src="resources/images/icon-searchds.png" alt="">
+                </div>
+                <h4>Search structures</h4>
+                <div class="tree-container" id="search">
+                    <!-- Subtemas de Search -->
+                    <a href="/html/QuintaSeccion/SearchStructures.html" class="button-subtitle">a. Sequential search</a>
+                    <a href="/html/QuintaSeccion/SearchStructures2.html" class="button-subtitle">b. Binary search</a>
+                    <a href="/html/QuintaSeccion/SearchStructures3.html" class="button-subtitle">c. Tree search</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/anim.js"></script>
+</body>
+</html>

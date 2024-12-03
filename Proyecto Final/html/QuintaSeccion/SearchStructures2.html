@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de texto y Editor Python</title>
+    <link rel="stylesheet" href="/html/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css">
+</head>
+<body>
+    <h1>Generador de texto con Google Gemini y Editor Python</h1>
+
+    <!-- Sección Gemini -->
+    <div id="gemini-section">
+        <h2>Generador de texto con Google Gemini</h2>
+        <input value="¿Cómo implementar una búsqueda binaria en Python?" type="text" id="inputText" placeholder="Escribe algo aquí...">
+        <button id="generateButton">Generar</button>
+        <p id="responseText"></p>
+    </div>
+
+    <!-- Sección Editor Python -->
+    <div id="editor-section">
+        <h2>Python Online Editor</h2>
+        <div id="editor"></div>
+        <button onclick="runCode()">Run</button>
+        <div id="output">Output will appear here...</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script type="module" src="/js/gemini.js"></script>
+    <script src="/js/Quinta/editor15.js"></script>
+</body>
+</html>

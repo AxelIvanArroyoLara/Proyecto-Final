@@ -1,0 +1,370 @@
+/* Estilo para el título principal */
+.titulo-principal {
+    font-size: 2.5rem; /* Tamaño grande para destacar */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Estilo para los subtítulos */
+.subtitulo {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff; /* Color destacado */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Estilo para artículos (Equipo de Trabajo) */
+article {
+    background: #222; /* Fondo oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para los encabezados dentro de artículos */
+article h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #111; /* Fondo oscuro */
+    color: #ccc;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes button-bg-animation {
+    0% {background-position: left}
+    50% {background-position: right}
+    100% {background-position: left}
+}
+
+body{
+    background: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo general del header */
+header {
+    background-color: #89012e; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 15px 20px; /* Espaciado */
+    display: flex;
+    justify-content: space-between; /* Espaciado entre logo y navegación */
+    align-items: center; /* Alinea los elementos verticalmente */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Contenedor principal del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo del logo y texto */
+.logo {
+    display: flex;
+    align-items: center; /* Alineación vertical */
+    gap: 15px; /* Espaciado entre imagen y texto */
+}
+
+.logo img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px; /* Asegura un tamaño uniforme */
+    object-fit: contain; /* Mantiene las proporciones de la imagen */
+}
+
+.nombre-empresa {
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-weight: 600; /* Negrita */
+}
+
+/* Estilo de navegación */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 20px; /* Espaciado entre enlaces */
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #00bcd4; /* Color de hover */
+}
+
+.container-button-modal_welcome {
+    position: relative; 
+    width: 30vw;
+    height: 30vw;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.container-button-modal_welcome::before {
+    content: '';
+    position: absolute;
+    top: -5px; 
+    left: -5px; 
+    right: -5px; 
+    bottom: -5px; 
+    border-radius: 50%; 
+    background: conic-gradient(from 0deg, red, yellow, green, blue,  purple, rgb(255, 0, 144)); 
+    animation: spin 3s linear infinite;
+    z-index: -1; 
+}
+
+.button-modal_welcome {
+    background: linear-gradient(45deg, purple, blue);
+    width: 100%; 
+    height: 100%; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-size: 300%;
+    background-position: left;
+    z-index: 1; 
+    transition: background-position 2s, transform 1.5s ease, box-shadow 1.5s ease;
+    cursor: none;
+}
+
+.tree-container {
+    display: none;
+    position: relative;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.node-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Conexión entre nodos (líneas entre botones) */
+.node-container::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 50px;
+    background-color: #000;
+    top: -50px;  /* Se coloca arriba de cada nodo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+/* Mostrar las líneas de conexión cuando el nodo tenga hijos */
+.tree-container.active .node-container::before {
+    display: block;
+}
+
+/* Sub-botones debajo de cada nodo */
+.tree-container {
+    display: none;
+    position: relative;
+    margin-top: 20px;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sub-botones en forma circular */
+.button-subtitle {
+    background: linear-gradient(45deg, green, yellow);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px); /* Empujarlos hacia abajo inicialmente */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Mostrar sub-botones con animación */
+.tree-container.active .button-subtitle {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mostrar los sub-botones cuando el árbol está activo */
+.tree-container.active {
+    display: block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.button-modal_welcome:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: background-position 2s, transform 1.5s ease;
+    background-position: right;
+}
+
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); 
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+    opacity: 1;
+    transition: opacity 0.5s ease; 
+}
+
+
+.hidden {
+    opacity: 0;
+    pointer-events: none; 
+    transform: scale(0.8); 
+}
+
+.container-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../resources/images/bg-index_02.png') no-repeat center center;
+    background-size: 100%;
+    z-index: -1;
+}
+
+.container-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px); 
+    z-index: -1;
+}
+
+.container-content {
+    position: relative; 
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    vertical-align: center;
+}
+
+.tree {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.button-title{
+    background-size: 300%;
+    background-image: linear-gradient(45deg, yellow, orange, purple, blue);
+    animation: button-bg-animation 8s infinite;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-title:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tree ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+    display: none;
+}
+
+.tree button {
+    background-color: #89012e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.tree button:hover {
+    background-color: #89012e;
+}
+
+.button-title{
+    border-radius: 50%;
+    background-color: #89012e;
+    width: 10vw;
+    height: 10vw;
+    margin: auto;
+}
